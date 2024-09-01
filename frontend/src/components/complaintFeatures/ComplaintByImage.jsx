@@ -83,6 +83,19 @@ const ComplaintByImage = () => {
         } catch (error) {
           console.error('Error in posting complaint:', error)
         }
+        try {
+          // Post to port 8080
+          const response8080 = await axios.post("http://localhost:8080/complaints", {
+            id,
+            department,
+            category,
+            priority,
+            description,
+          });
+          console.log("Complaint posted successfully to port 8080:", response8080.data);
+        } catch (error) {
+          console.error("Error in posting complaint to port 8080:", error);
+        }
       }
 
       postComplaint(department, category, priority, complaint)
@@ -114,20 +127,31 @@ const ComplaintByImage = () => {
     const formData = new FormData()
     formData.append('image', file)
     setUploading(true)
-    axios
-      .post('/api/upload', formData, {
+
+    try {
+      const response3000 = await axios.post('http://localhost:3000/api/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
-      })
-      .then((res) => {
-        setUpload(res.data.data)
-        getResponse(res.data.data)
-        setUploading(false)
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+      });
+  
+      console.log('Response from port 3000:', response3000.data);
+      setUpload(response3000.data.data);
+      getResponse(response3000.data.data);
+  
+      const response8080 = await axios.post('http://localhost:8080/api/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+  
+      console.log('Response from port 8080:', response8080.data);
+      
+    } catch (error) {
+      console.error('Error uploading file:', error);
+    } finally {
+      setUploading(false);
+    }
   }
 
   const handleSubmit = (e) => {

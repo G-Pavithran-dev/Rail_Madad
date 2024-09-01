@@ -2,9 +2,11 @@ import express from 'express'
 import ViteExpress from 'vite-express'
 import multer from 'multer'
 import { checkProgress, promptVideo, uploadVideo } from './gemini.js'
+import cors from 'cors';
 
 const app = express()
 app.use(express.json())
+app.use(cors());
 
 // need /tmp for appengine and gemini api to access
 const upload = multer({ dest: '/tmp/' })
@@ -50,4 +52,4 @@ app.post('/api/prompt', async (req, res) => {
 // eslint-disable-next-line no-undef
 const port = process.env.NODE_ENV === 'production' ? 8080 : 3000
 
-ViteExpress.listen(app, port, () => console.log('Server is listening...'))
+ViteExpress.listen(app, port, () => console.log(`Server is listening on port ${port}...`));
