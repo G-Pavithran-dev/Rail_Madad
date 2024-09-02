@@ -9,12 +9,14 @@ import StationGrievances from "./components/Station/StationGrievances";
 import Enquiry from "./components/enquiry/Enquiry";
 import Suggestions from "./components/suggestions/Suggestions";
 import Appreciation from "./components/appreciation/appreciation";
+import HomePage from "./components/homePage/HomePage";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Complaint />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/complaint" element={<Complaint />} />
         <Route path="/complaintbyimage" element={<ComplaintByImage />} />
         <Route path="/viewComplaints" element={<ViewComplaints />} />
         <Route path="/Manualcomplaint" element={<JourneyDetails />} />
