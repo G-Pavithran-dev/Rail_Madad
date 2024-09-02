@@ -6,11 +6,24 @@ import AppreciationIcon from "@mui/icons-material/ThumbUp";
 import EnquiryIcon from "@mui/icons-material/HelpOutline";
 import TrackIcon from "@mui/icons-material/TrackChanges";
 import FeedbackIcon from "@mui/icons-material/Feedback";
-import { TextField, Box, MenuItem } from "@mui/material";
+import { Box } from "@mui/material";
 import TrainGrievances from "../Train/TrainGrievance";
+import StationGrievances from "../Station/StationGrievances";
+import Enquiry from "../enquiry/Enquiry";
+import Appreciation from "../appreciation/Appreciation";
+import TrackConcern from "../Station/StationGrievances";
+import Suggestions from "../suggestions/Suggestions";
 
 const Dashboard = () => {
   const [activeButton, setActiveButton] = useState("TRAIN");
+  const componentMapping = {
+    TRAIN: <TrainGrievances />,
+    STATION: <StationGrievances />,
+    "APPRECIATION/TRAIN ANUBHAV": <Appreciation />,
+    ENQUIRY: <Enquiry />,
+    "TRACK YOUR CONCERN": <TrackConcern />,
+    SUGGESTIONS: <Suggestions />,
+  };
 
   const buttonList = [
     { name: "TRAIN", icon: <TrainIcon fontSize="inherit" /> },
@@ -49,49 +62,7 @@ const Dashboard = () => {
           overflow: "auto",
         }}
       >
-        {/* <form className="space-y-4">
-          <TextField fullWidth label="Your Name" variant="outlined" />
-          <TextField
-            fullWidth
-            label="Train Number"
-            variant="outlined"
-            type="number"
-          />
-          <TextField
-            fullWidth
-            label="Date of Journey"
-            variant="outlined"
-            type="date"
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-          <TextField fullWidth select label="Feedback Type" variant="outlined">
-            <MenuItem value="Service Quality">Service Quality</MenuItem>
-            <MenuItem value="Cleanliness">Cleanliness</MenuItem>
-            <MenuItem value="Timeliness">Timeliness</MenuItem>
-            <MenuItem value="Staff Behavior">Staff Behavior</MenuItem>
-            <MenuItem value="Other">Other</MenuItem>
-          </TextField>
-          <TextField
-            fullWidth
-            label="Your Concern"
-            variant="outlined"
-            multiline
-            rows={4}
-          />
-          <TextField
-            fullWidth
-            label="Additional Comments"
-            variant="outlined"
-            multiline
-            rows={2}
-          />
-          <Button variant="contained" color="primary">
-            Submit
-          </Button>
-        </form> */}
-        <TrainGrievances />
+        {componentMapping[activeButton]}
       </Box>
     );
   };

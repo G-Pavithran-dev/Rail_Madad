@@ -62,7 +62,7 @@ export default function Suggestions() {
         container
         component="main"
         sx={{
-          height: "100vh",
+          // height: "100vh",
           placeItems: "center",
           justifyContent: "center",
           alignItems: "center",

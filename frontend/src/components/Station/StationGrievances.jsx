@@ -76,7 +76,7 @@ export default function StationGrievances() {
         container
         component="main"
         sx={{
-          height: "100vh",
+          // height: "100vh",
           placeItems: "center",
           justifyContent: "center",
           alignItems: "center",
@@ -95,7 +95,7 @@ export default function StationGrievances() {
             component="form"
             noValidate
             onSubmit={handleSubmit}
-            sx={{ mt: 3, ml: 3 }}
+            // sx={{ mt: 3, ml: 3 }}
           >
             <Grid container spacing={2} item xs={12} sm={12}>
               <Grid container item xs={12} sm={12}>
