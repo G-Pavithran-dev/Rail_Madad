@@ -15,11 +15,53 @@
       "description": "- **Subject:** Unhygienic food served on train\n- **Description:**  The food provided in the train was unhygienic and not fit for consumption. The omelette was not cooked properly and the bread was stale. This is a serious health hazard and should not be tolerated."
     },
     {
-      "id": 0.5345002650996094,
+      "id": 0.9621311468963876,
       "department": "Rolling Stock",
-      "category": "Coach Maintenance",
+      "category": "Damaged Seats",
       "priority": "Medium",
-      "description": "- **Subject:** Dirty and Unhygienic Coach\n- **Description:** The coach appears to be dirty and in need of cleaning. The windows are also dirty, which can affect the passenger's view and overall experience."
+      "description": "- **Subject:** Damaged Seats in Train Coach\n- **Description:** The seats in the train coach are damaged and torn. The condition of the seats is not suitable for passengers to sit comfortably.  This needs to be repaired or replaced."
+    },
+    {
+      "id": 0.7634592798401727,
+      "department": "Rolling Stock",
+      "category": "Damaged Seats",
+      "priority": "Medium",
+      "description": "- **Subject:** Damaged Seat in Train\n- **Description:** The seat in the train is damaged and needs to be repaired. The upholstery is torn and the seat is uncomfortable to sit on. Please take action to repair the damaged seat."
+    },
+    {
+      "id": 0.3395138803723883,
+      "department": "Catering",
+      "category": "Food Quality",
+      "priority": "Medium",
+      "description": "- **Subject:**  Unhygienic and Unsatisfactory Food Quality\n- **Description:** The food provided was unhygienic and not of satisfactory quality. The roti was dry and broken, and the curries were not fresh. This is unacceptable for a train journey and needs to be improved."
+    },
+    {
+      "id": 0.7512793719778286,
+      "department": "Rolling Stock",
+      "category": "Damaged Seats ",
+      "priority": "Medium ",
+      "description": "- Subject: Damaged Seats on Train \n- Description: The seats on the train are damaged and need to be repaired or replaced. This is causing discomfort to passengers."
+    },
+    {
+      "id": 0.0020907660289519736,
+      "department": "Catering",
+      "category": "Food Quality",
+      "priority": "Medium",
+      "description": "- Subject: Unhygienic Food Served\n- Description: The food served was unhygienic, the omelet was not cooked properly and the bread was stale. This was not acceptable for the price paid."
+    },
+    {
+      "id": 0.6978698116185571,
+      "department": "Rolling Stock",
+      "category": "Damaged Seats",
+      "priority": "Medium",
+      "description": "- **Subject:** Damaged seats in train\n- **Description:** The seats in the train are damaged. The seat cover is torn and the padding is coming out. This is not a safe or comfortable environment for passengers. Please repair or replace these seats as soon as possible."
+    },
+    {
+      "id": 0.7593946528473112,
+      "department": "Catering",
+      "category": "Food Quality",
+      "priority": "Medium",
+      "description": "- Subject: Unsanitary and Unhygienic Food Served on Train\n- Description: The food served on the train was of poor quality and appeared to be unhygienic. The roti was torn and broken, and the dal had a strange smell and taste. The overall presentation of the food was also unappealing. I am concerned about the potential health risks associated with consuming such food."
     }
   ]
 }

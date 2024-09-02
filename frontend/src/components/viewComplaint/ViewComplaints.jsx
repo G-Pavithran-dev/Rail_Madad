@@ -28,7 +28,7 @@ export default function ViewComplaints() {
   const [selectedDepartment, setSelectedDepartment] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:3001/complaints")
+    axios.get("http://localhost:8080/complaints")
       .then(response => {
         setComplaints(response.data);
       })
